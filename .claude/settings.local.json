@@ -1,0 +1,15 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(adb devices:*)",
+      "Bash(gradle wrapper:*)",
+      "Bash(where:*)",
+      "Bash(curl:*)",
+      "Bash(chmod:*)",
+      "Bash(./gradlew installDebug:*)",
+      "Bash(python:*)",
+      "Bash(adb shell:*)",
+      "Bash(pip install:*)"
+    ]
+  }
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Recipe Recommender</string>
+    <string name="enter_ingredients">Enter ingredients (one per line)</string>
+    <string name="get_recipes">Get Recipes</string>
+    <string name="ingredients_hint">tomato\nonion\nchicken\ngarlic</string>
+    <string name="recipe_name">Recipe Name</string>
+    <string name="ingredients">Ingredients:</string>
+    <string name="instructions">Instructions:</string>
+    <string name="prep_time">Prep Time: %s</string>
+    <string name="difficulty">Difficulty: %s</string>
+    <string name="error_empty_ingredients">Please enter at least one ingredient</string>
+    <string name="error_network">Network error. Please check your connection.</string>
+    <string name="loading">Loading recipes...</string>
+</resources>
