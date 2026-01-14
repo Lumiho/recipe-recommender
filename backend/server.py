@@ -71,7 +71,7 @@ Only return the JSON, no additional text."""
 
     try:
         message = client.messages.create(
-            model="claude-3-5-sonnet-20241022",
+            model="claude-sonnet-4-20250514",
             max_tokens=2048,
             messages=[
                 {"role": "user", "content": prompt}
@@ -80,7 +80,14 @@ Only return the JSON, no additional text."""
 
         response_text = message.content[0].text
 
+        # Strip markdown code blocks if present
+        import re
         import json
+        response_text = response_text.strip()
+        if response_text.startswith("```"):
+            response_text = re.sub(r'^```(?:json)?\n?', '', response_text)
+            response_text = re.sub(r'\n?```$', '', response_text)
+
         response_data = json.loads(response_text)
 
         return RecipeResponse(**response_data)

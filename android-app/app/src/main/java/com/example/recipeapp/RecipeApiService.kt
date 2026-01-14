@@ -14,7 +14,7 @@ interface RecipeApiService {
     suspend fun getRecipes(@Body request: FoodListRequest): RecipeResponse
 
     companion object {
-        private const val BASE_URL = "http://172.25.128.1:8000/"  // Use 10.0.2.2 for Android emulator to reach localhost
+        private const val BASE_URL = "http://10.0.0.10:8000/"  // Use 10.0.2.2 for Android emulator to reach localhost
 
         fun create(): RecipeApiService {
             val logging = HttpLoggingInterceptor().apply {
